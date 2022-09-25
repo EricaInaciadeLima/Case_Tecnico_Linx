@@ -1,6 +1,6 @@
 export enum TYPE {
   PessoaJuridica = "Pessoa Jurídica",
-  Pessoafisica = "Pessoa física",
+  Pessoafisica = "Pessoa Física",
 }
 export class CustomerModel {
   constructor(

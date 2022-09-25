@@ -12,10 +12,11 @@ address VARCHAR(255) NOT NULL
 CREATE TABLE IF NOT EXISTS PAYCAMENT_LINX(
 id VARCHAR(255) PRIMARY KEY,
 amount VARCHAR(255) NOT NULL,
-items VARCHAR(255) NOT NULL,
 status ENUM( "Active", "Canceled"),
 code  VARCHAR(255),
-payment_method ENUM("Card", "Boleto") NOT NULL
+payment_method ENUM("Card", "Boleto") NOT NULL,
+customer_id VARCHAR(255) ,
+FOREIGN KEY(customer_id) REFERENCES CUSTOMER(id)
 );
 
 CREATE TABLE IF NOT EXISTS CARD_LINX(
