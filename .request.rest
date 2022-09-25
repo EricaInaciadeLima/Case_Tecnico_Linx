@@ -1,0 +1,28 @@
+POST http://localhost:3003/customer
+Content-Type: application/json
+
+{
+  "name": "Erica Inacia",
+  "email": "ericainacia27@gmail.com",
+  "document": "15978425832",
+  "type": "Pessoa fisica",
+  "phones": "1198745631",
+  "birthdate": "27/03/2003",
+  "address": " Rua Vila dos Lobos, 14 "
+}
+
+###
+POST http://localhost:3003/paycament
+Content-Type: application/json
+
+{
+    "amount": 257,
+    "payment_method": "BTO",
+    "customer_id": "911775b8-2029-489d-a3e3-d2f43d4c2699",
+    
+}
+###
+GET http://localhost:3003/customer/911775b8-2029-489d-a3e3-d2f43d4c2699
+
+###
+GET http://localhost:3003/paycament/96dc0354-c5aa-45ba-a527-beb576cb174b
