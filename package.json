@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "ts-node-dev ./src/index.ts",
+    "start": "tsc && node ./build/index.js",
+    "build": "tsc",
+    "test": "clear && jest"
   },
   "repository": {
     "type": "git",

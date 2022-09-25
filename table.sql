@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS CUSTOMER(
+id VARCHAR(255) PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+email VARCHAR(255) UNIQUE NOT NULL,
+document VARCHAR(255) NOT NULL,
+type ENUM("Pessoa física", "Pessoa Jurídica") NOT NULL,
+phones VARCHAR(255) NOT NULL,
+birthdate VARCHAR(255) NOT NULL,
+address VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS PAYCAMENT_LINX(
+id VARCHAR(255) PRIMARY KEY,
+amount VARCHAR(255) NOT NULL,
+items VARCHAR(255) NOT NULL,
+status ENUM( "Active", "Canceled"),
+code  VARCHAR(255),
+payment_method ENUM("Card", "Boleto") NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS CARD_LINX(
+  id VARCHAR(255) PRIMARY KEY,
+  card_holder_name VARCHAR(255)  NOT NULL,
+  card_number  VARCHAR(255)  NOT NULL,
+  card_expiration_date VARCHAR(255)  NOT NULL ,
+  card_cvv  VARCHAR(255)  NOT NULL,
+  customer_id VARCHAR(255) ,
+  FOREIGN KEY(customer_id) REFERENCES CUSTOMER(id)
+);

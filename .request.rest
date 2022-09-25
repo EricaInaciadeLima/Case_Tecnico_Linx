@@ -1,0 +1,12 @@
+POST http://localhost:3003/customer
+Content-Type: application/json
+
+{
+  "name": "Erica Inacia",
+  "email": "ericainacia@gmail.com",
+  "document": "15978925832",
+  "type": "Pessoa fisica",
+  "phones": "1198745631",
+  "birthdate": "27032003",
+  "address": " Rua Vila dos Lobos, 14 "
+}
